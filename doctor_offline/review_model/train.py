@@ -67,7 +67,7 @@ def train(category_tensor, line_tensor):
         # 将参数的张量表示与参数的梯度乘以学习率的结果相加以此来更新参数
         p.data.add_(-learning_rate, p.grad.data)
 
-    # 返回结果和损失的值
+    # 返回结果和损失的值 输出的output是一个二维向量 (1, 2)
     return output, loss.item()
 
 # 第三步: 模型验证函数
